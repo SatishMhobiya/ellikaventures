@@ -87,29 +87,6 @@ export function ProjectGallery({ items, projectName }: ProjectGalleryProps) {
             Curated architectural photography and interior show-suite vistas for {projectName}.
           </p>
         </div>
-
-        {/* Filter Tabs */}
-        {/* <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => {
-            const count =
-              cat === "All" ? items.length : items.filter((i) => i.category === cat).length;
-            if (count === 0 && cat !== "All") return null;
-
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`rounded-md px-3.5 py-1.5 text-xs uppercase tracking-[0.16em] transition-all ${
-                  activeCategory === cat
-                    ? "bg-foreground text-background shadow-sm"
-                    : "border border-border/60 text-muted-foreground hover:bg-muted hover:text-foreground"
-                }`}
-              >
-                {cat} ({count})
-              </button>
-            );
-          })}
-        </div> */}
       </div>
 
       {/* Grid Layout */}
@@ -137,21 +114,8 @@ export function ProjectGallery({ items, projectName }: ProjectGalleryProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
 
-              {/* {item.tag && (
-                <div className="absolute left-4 top-4 rounded bg-background/90 px-2.5 py-1 text-[0.6875rem] font-medium uppercase tracking-wider text-brand backdrop-blur-sm">
-                  {item.tag}
-                </div>
-              )} */}
-
               <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-2">
-                {/* <div>
-                  <span className="text-[0.6875rem] uppercase tracking-[0.2em] text-brand">
-                    {item.category}
-                  </span>
-                  <h4 className="font-display text-base font-medium text-white sm:text-lg">
-                    {item.title}
-                  </h4>
-                </div> */}
+
                 <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-transform group-hover:scale-110">
                   <Maximize2 className="size-4" />
                 </div>

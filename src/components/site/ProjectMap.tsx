@@ -55,52 +55,6 @@ export function ProjectMap({
       </div>
 
       {/* Connectivity Tabs */}
-      {categories && categories.length > 0 && (
-        <div className="mt-8">
-          {/* <div className="flex flex-wrap gap-2 border-b border-border/60 pb-3">
-            {categories.map((cat, idx) => (
-              <button
-                key={cat.category}
-                onClick={() => setActiveCategory(idx)}
-                className={`rounded-md px-4 py-2 text-xs uppercase tracking-[0.18em] transition-all ${
-                  activeCategory === idx
-                    ? "bg-foreground text-background shadow-sm"
-                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
-                }`}
-              >
-                {cat.category}
-              </button>
-            ))}
-          </div> */}
-
-          {/* <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {currentCategory.items.map((item) => (
-              <div
-                key={item.place}
-                className="group rounded-lg border border-border/60 bg-background/80 p-4 transition-all hover:border-brand/50 hover:shadow-sm"
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <h4 className="text-sm font-medium text-foreground group-hover:text-brand">
-                    {item.place}
-                  </h4>
-                  <span className="shrink-0 rounded bg-brand/10 px-2 py-0.5 text-[0.6875rem] font-medium text-brand">
-                    {item.distance}
-                  </span>
-                </div>
-                <div className="mt-2 flex items-center gap-1.5 text-xs text-muted-foreground">
-                  <Clock className="size-3 text-brand" />
-                  <span>{item.travelTime}</span>
-                </div>
-                {item.highlight && (
-                  <p className="mt-1 text-[0.6875rem] text-muted-foreground/80 line-clamp-1">
-                    {item.highlight}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div> */}
-        </div>
-      )}
 
       {/* Map Embed with Custom Dark Champagne Frame & Mobile Scroll Protection */}
       <div

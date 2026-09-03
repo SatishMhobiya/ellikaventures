@@ -46,31 +46,6 @@ export function ProjectAmenities({
             master-crafted with 30+ signature lifestyle spaces.
           </p>
         </div>
-
-        {/* Category Filters */}
-        {/* <div className="flex flex-wrap gap-2">
-          {categories.map((cat) => {
-            const count =
-              cat === "All"
-                ? visualAmenities.length
-                : visualAmenities.filter((a) => a.category === cat).length;
-            if (count === 0 && cat !== "All") return null;
-
-            return (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`rounded-md px-3.5 py-1.5 text-xs uppercase tracking-[0.16em] transition-all ${
-                  activeCategory === cat
-                    ? "bg-foreground text-background shadow-sm"
-                    : "border border-border/60 text-muted-foreground hover:bg-muted hover:text-foreground"
-                }`}
-              >
-                {cat}
-              </button>
-            );
-          })}
-        </div> */}
       </div>
 
       {/* Visual Amenities Cards */}
@@ -90,37 +65,10 @@ export function ProjectAmenities({
                 className="size-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              {/* {amenity.badge && (
-                <div className="absolute left-3.5 top-3.5 rounded bg-background/90 px-2.5 py-1 text-[0.6875rem] font-medium uppercase tracking-wider text-brand backdrop-blur-sm">
-                  {amenity.badge}
-                </div>
-              )} */}
               <div className="absolute bottom-3.5 left-3.5 right-3.5">
-                {/* <span className="text-[0.6875rem] uppercase tracking-[0.2em] text-brand">
-                  {amenity.category}
-                </span> */}
                 <h4 className="font-display text-lg font-medium text-white">{amenity.title}</h4>
               </div>
             </div>
-
-            {/* <div className="flex flex-1 flex-col justify-between p-5">
-              <p className="text-xs leading-relaxed text-muted-foreground">
-                {amenity.description}
-              </p>
-
-              {amenity.features && amenity.features.length > 0 && (
-                <div className="mt-4 flex flex-wrap gap-1.5 border-t border-border/60 pt-3">
-                  {amenity.features.map((feat) => (
-                    <span
-                      key={feat}
-                      className="rounded bg-surface px-2 py-1 text-[0.6875rem] text-foreground/80 border border-border/50"
-                    >
-                      {feat}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div> */}
           </div>
         ))}
       </div>

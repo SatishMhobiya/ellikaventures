@@ -82,10 +82,6 @@ export function EnquiryModal({
               <CheckCircle className="size-8" />
             </div>
             <h3 className="mt-5 font-display text-2xl text-foreground">Request Received</h3>
-            {/* <p className="mt-2 text-sm text-muted-foreground">
-              Our verified advisor for <span className="font-semibold text-brand">{projectName}</span>{" "}
-              will share the documents and reach out via WhatsApp/Phone within 15 minutes.
-            </p> */}
             <button
               onClick={() => {
                 setSubmitted(false);
@@ -164,42 +160,14 @@ export function EnquiryModal({
                 </div>
               </div>
 
-              {/* {defaultAction === "visit" && (
-                <div>
-                  <label className="block text-xs uppercase tracking-wider text-muted-foreground">
-                    Preferred Visit Date
-                  </label>
-                  <div className="relative mt-1">
-                    <Calendar className="absolute left-3.5 top-3.5 size-4 text-muted-foreground" />
-                    <input
-                      type="date"
-                      value={formData.visitDate}
-                      onChange={(e) => setFormData({ ...formData, visitDate: e.target.value })}
-                      className="w-full rounded-md border border-border bg-background py-3 pl-10 pr-4 text-sm text-foreground outline-none transition focus:border-brand"
-                    />
-                  </div>
-                </div>
-              )} */}
-
               <div className="pt-2">
                 <button
                   type="submit"
                   className="w-full rounded-md bg-gradient-brand py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-brand-foreground shadow-brand transition hover:opacity-95"
                 >
                   Confirm
-                  {/* {defaultAction === "floorplan"
-                    ? "Get Detailed Floor Plan PDF"
-                    : defaultAction === "visit"
-                    ? "Confirm Site Visit Request"
-                    : defaultAction === "pricing"
-                    ? "Receive Price Breakdown"
-                    : "Download Official Brochure"} */}
                 </button>
               </div>
-
-              {/* <p className="text-center text-[0.6875rem] text-muted-foreground">
-                🔒 We respect your privacy. No spam. Instant official PDF download link provided.
-              </p> */}
             </form>
           </div>
         )}
