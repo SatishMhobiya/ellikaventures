@@ -1,0 +1,74 @@
+/* ============================================================
+   THEME FILE — change the whole site's colors from here only.
+   Palette: BLACK · IVORY · CHAMPAGNE GOLD (Light Aesthetic)
+   Every color in the app resolves to one of these tokens.
+   Values must stay in oklch() format.
+   ============================================================ */
+
+:root {
+  /* Champagne gold */
+  --brand: oklch(0.68 0.105 78);
+  --brand-deep: oklch(0.56 0.115 72);
+  --brand-foreground: oklch(0.13 0.006 60);
+
+  /* Ivory base & surfaces */
+  --ivory: oklch(0.975 0.012 92);
+  --ivory-muted: oklch(0.93 0.015 90);
+
+  /* Surfaces & Typography (Light theme) */
+  --background: var(--ivory);
+  --foreground: oklch(0.16 0.008 60);
+  --surface: oklch(0.99 0.006 92);
+  --surface-strong: oklch(0.94 0.015 88);
+
+  --card: oklch(0.99 0.006 92);
+  --card-foreground: oklch(0.16 0.008 60);
+  --popover: oklch(0.99 0.006 92);
+  --popover-foreground: oklch(0.16 0.008 60);
+
+  --primary: var(--brand);
+  --primary-foreground: var(--brand-foreground);
+  --secondary: oklch(0.93 0.015 88);
+  --secondary-foreground: oklch(0.16 0.008 60);
+  --muted: oklch(0.93 0.015 88);
+  --muted-foreground: oklch(0.46 0.012 60);
+  --accent: oklch(0.92 0.025 82);
+  --accent-foreground: oklch(0.16 0.008 60);
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 90);
+
+  --border: oklch(0.88 0.018 85);
+  --input: oklch(0.88 0.018 85);
+  --ring: var(--brand);
+
+  --sidebar: oklch(0.99 0.006 92);
+  --sidebar-foreground: oklch(0.16 0.008 60);
+  --sidebar-primary: var(--brand);
+  --sidebar-primary-foreground: var(--brand-foreground);
+  --sidebar-accent: oklch(0.93 0.015 88);
+  --sidebar-accent-foreground: oklch(0.16 0.008 60);
+  --sidebar-border: oklch(0.88 0.018 85);
+  --sidebar-ring: var(--brand);
+
+  --chart-1: var(--brand);
+  --chart-2: oklch(0.55 0.08 200);
+  --chart-3: oklch(0.58 0.09 140);
+  --chart-4: var(--brand-deep);
+  --chart-5: oklch(0.52 0.12 25);
+
+  /* Derived effects */
+  --gradient-brand: linear-gradient(100deg, var(--brand-deep), var(--brand));
+  --gradient-veil: linear-gradient(
+    to top,
+    color-mix(in oklab, var(--background) 96%, transparent),
+    color-mix(in oklab, var(--background) 65%, transparent) 55%,
+    color-mix(in oklab, var(--background) 20%, transparent)
+  );
+  --shadow-lift: 0 20px 45px -15px color-mix(in oklab, oklch(0.18 0.008 60) 10%, transparent);
+  --shadow-brand: 0 18px 45px -15px color-mix(in oklab, var(--brand) 30%, transparent);
+
+  /* Shape & type */
+  --radius: 0.25rem;
+  --font-display: "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+}
