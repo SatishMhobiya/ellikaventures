@@ -36,7 +36,7 @@ export function ProjectFloorPlans({
         </div>
 
         {/* Clean Toggle Pills */}
-        <div className="inline-flex rounded-lg border border-border/80 bg-background p-1 self-start sm:self-auto">
+        {/* <div className="inline-flex rounded-lg border border-border/80 bg-background p-1 self-start sm:self-auto">
           <button
             type="button"
             onClick={() => setActiveTab("master")}
@@ -61,11 +61,11 @@ export function ProjectFloorPlans({
             <Square className="size-3.5" />
             <span>Unit Floor Plans ({unitPlans.length})</span>
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* MASTER PLAN VIEW */}
-      {activeTab === "master" && (
+      {/* {activeTab === "master" && ( */}
         <div className="mt-6 sm:mt-8 space-y-6 animate-fade-in">
           <div className="relative overflow-hidden rounded-xl border border-border/70 bg-black/5">
             <img
@@ -90,7 +90,7 @@ export function ProjectFloorPlans({
               <div className="flex items-center gap-2">
                 <Compass className="size-4 text-brand" />
                 <span className="text-xs uppercase tracking-widest text-brand font-semibold">
-                  Master Site Blueprint · {masterPlan.totalAcreage}
+                  Master Site Blueprint
                 </span>
               </div>
               <button
@@ -98,13 +98,13 @@ export function ProjectFloorPlans({
                 onClick={() => onDownloadFloorPlan("Master Layout Plan")}
                 className="flex items-center gap-1.5 rounded bg-brand px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-foreground shadow-sm hover:opacity-95"
               >
-                <Download className="size-3.5" />
-                <span>Download PDF</span>
+                {/* <Download className="size-3.5" /> */}
+                <span>Request</span>
               </button>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <div className="rounded-lg border border-border/60 bg-background p-3.5">
               <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Land Parcel</p>
               <p className="mt-1 font-display text-lg sm:text-xl text-foreground">{masterPlan.totalAcreage}</p>
@@ -121,106 +121,71 @@ export function ProjectFloorPlans({
               <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Efficiency</p>
               <p className="mt-1 font-display text-lg sm:text-xl text-brand">{masterPlan.carpetEfficiency}</p>
             </div>
-          </div>
+          </div> */}
         </div>
-      )}
+      {/* )} */}
 
       {/* UNIT PLANS VIEW */}
-      {activeTab === "unit" && (
-        <div className="mt-6 sm:mt-8 space-y-6 animate-fade-in">
-          {/* Unit Switcher Pills */}
-          <div className="flex flex-wrap gap-2 border-b border-border/60 pb-3">
-            {unitPlans.map((unit, idx) => (
-              <button
-                key={unit.type}
-                type="button"
-                onClick={() => setSelectedUnitIndex(idx)}
-                className={`rounded-md px-3.5 py-2 text-xs uppercase tracking-[0.14em] font-medium transition-all ${
-                  selectedUnitIndex === idx
-                    ? "bg-foreground text-background shadow-sm"
-                    : "border border-border/60 text-muted-foreground hover:bg-muted hover:text-foreground"
-                }`}
-              >
-                {unit.type}
-              </button>
-            ))}
-          </div>
+      {/* {activeTab === "unit" && ( */}
 
-          <div className="grid gap-6 lg:grid-cols-[1.2fr_1fr] lg:items-start">
-            {/* Floor Plan Graphic */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border/70 bg-black/5">
-              <img
-                src={currentUnit.image}
-                alt={`${currentUnit.title} Floor Plan Layout`}
-                width={1000}
-                height={750}
-                className="size-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+         <div className="mt-6 sm:mt-8 space-y-6 animate-fade-in">
+          <div className="relative overflow-hidden rounded-xl border border-border/70 bg-black/5">
+            <img
+              src={masterPlan.image}
+              alt={`${projectName} Master Plan Layout`}
+              width={1400}
+              height={900}
+              className="w-full object-cover shadow-inner"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
 
+            <button
+              type="button"
+              onClick={() => setViewHighResImage(masterPlan.image)}
+              className="absolute right-3.5 top-3.5 flex items-center gap-1.5 rounded-md bg-surface/90 px-3 py-1.5 text-xs text-foreground shadow-sm backdrop-blur-sm transition-all hover:bg-surface"
+            >
+              <Maximize2 className="size-3.5 text-brand" />
+              <span>Enlarge Plan</span>
+            </button>
+
+            <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-wrap items-center justify-between gap-2 text-white">
+              <div className="flex items-center gap-2">
+                <Compass className="size-4 text-brand" />
+                <span className="text-xs uppercase tracking-widest text-brand font-semibold">
+                  Unit Floor Plan
+                </span>
+              </div>
               <button
                 type="button"
-                onClick={() => setViewHighResImage(currentUnit.image)}
-                className="absolute right-3.5 top-3.5 flex items-center gap-1.5 rounded bg-surface/90 px-3 py-1.5 text-xs text-foreground shadow-sm backdrop-blur-sm transition-all hover:bg-surface"
+                onClick={() => onDownloadFloorPlan("Master Layout Plan")}
+                className="flex items-center gap-1.5 rounded bg-brand px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-foreground shadow-sm hover:opacity-95"
               >
-                <Maximize2 className="size-3.5 text-brand" />
-                <span>Enlarge Plan</span>
+                <Download className="size-3.5" />
+                <span>Request</span>
               </button>
-
-              <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-wrap items-center justify-between gap-2 text-white">
-                <div>
-                  <p className="text-[0.6875rem] uppercase tracking-wider text-brand font-medium">
-                    {currentUnit.facing} · {currentUnit.carpetArea} Carpet
-                  </p>
-                  <h5 className="font-display text-base sm:text-lg">{currentUnit.title}</h5>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => onDownloadFloorPlan(currentUnit.title)}
-                  className="flex items-center gap-1.5 rounded bg-brand px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-foreground shadow-sm hover:opacity-95"
-                >
-                  <Download className="size-3.5" />
-                  <span>Download PDF</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Compact Specs Grid */}
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="rounded-lg border border-border/60 bg-background p-3.5">
-                  <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Carpet Area</p>
-                  <p className="mt-1 font-display text-base sm:text-lg text-brand font-semibold">{currentUnit.carpetArea}</p>
-                </div>
-                <div className="rounded-lg border border-border/60 bg-background p-3.5">
-                  <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Super Built-up</p>
-                  <p className="mt-1 font-display text-base sm:text-lg text-foreground">{currentUnit.superBuiltUpArea}</p>
-                </div>
-                <div className="rounded-lg border border-border/60 bg-background p-3.5">
-                  <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Efficiency</p>
-                  <p className="mt-1 font-display text-base sm:text-lg text-brand font-semibold">{currentUnit.efficiency}</p>
-                </div>
-                <div className="rounded-lg border border-border/60 bg-background p-3.5">
-                  <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Balconies / Baths</p>
-                  <p className="mt-1 font-display text-base sm:text-lg text-foreground">{currentUnit.balconies}</p>
-                </div>
-              </div>
-
-              <div className="rounded-lg border border-brand/40 bg-brand/5 p-4">
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">Indicative Price</p>
-                <p className="mt-1 font-display text-xl text-brand font-bold">{currentUnit.price}</p>
-                <button
-                  type="button"
-                  onClick={() => onDownloadFloorPlan(currentUnit.title)}
-                  className="mt-3 w-full rounded-md bg-gradient-brand py-2.5 text-xs font-semibold uppercase tracking-wider text-brand-foreground shadow-brand"
-                >
-                  Request Floor Plan PDF & Cost Sheet
-                </button>
-              </div>
             </div>
           </div>
+
+          {/* <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div className="rounded-lg border border-border/60 bg-background p-3.5">
+              <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Land Parcel</p>
+              <p className="mt-1 font-display text-lg sm:text-xl text-foreground">{masterPlan.totalAcreage}</p>
+            </div>
+            <div className="rounded-lg border border-border/60 bg-background p-3.5">
+              <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Green Cover</p>
+              <p className="mt-1 font-display text-lg sm:text-xl text-brand">{masterPlan.openSpaceRatio}</p>
+            </div>
+            <div className="rounded-lg border border-border/60 bg-background p-3.5">
+              <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Towers</p>
+              <p className="mt-1 font-display text-lg sm:text-xl text-foreground">{masterPlan.towersCount}</p>
+            </div>
+            <div className="rounded-lg border border-border/60 bg-background p-3.5">
+              <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Efficiency</p>
+              <p className="mt-1 font-display text-lg sm:text-xl text-brand">{masterPlan.carpetEfficiency}</p>
+            </div>
+          </div> */}
         </div>
-      )}
+      {/* )} */}
 
       {/* Enlarge Modal */}
       {viewHighResImage && (

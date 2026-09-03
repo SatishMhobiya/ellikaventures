@@ -148,11 +148,6 @@ function Index() {
             Find your perfect property with <span className="text-brand">Naverah Assets</span>
           </h1>
 
-          <p className="mt-4 sm:mt-5 max-w-2xl text-sm leading-relaxed text-zinc-200 sm:text-lg">
-            Explore trusted luxury real estate opportunities designed to match your lifestyle and
-            investment goals. Hand-verified residences with complete transparency across Bengaluru.
-          </p>
-
           <SearchBar />
 
           <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs text-zinc-300">

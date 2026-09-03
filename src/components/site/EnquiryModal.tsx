@@ -52,8 +52,8 @@ export function EnquiryModal({
         return unitTitle
           ? `Floor Plan Specifications · ${unitTitle}`
           : `Download Floor Plans · ${projectName}`;
-      case "visit":
-        return `Schedule a Private Site Visit · ${projectName}`;
+      // case "visit":
+      //   return `Schedule a Private Site Visit · ${projectName}`;
       case "pricing":
         return `Request Detailed Cost Sheet · ${projectName}`;
       default:
@@ -82,10 +82,10 @@ export function EnquiryModal({
               <CheckCircle className="size-8" />
             </div>
             <h3 className="mt-5 font-display text-2xl text-foreground">Request Received</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
+            {/* <p className="mt-2 text-sm text-muted-foreground">
               Our verified advisor for <span className="font-semibold text-brand">{projectName}</span>{" "}
               will share the documents and reach out via WhatsApp/Phone within 15 minutes.
-            </p>
+            </p> */}
             <button
               onClick={() => {
                 setSubmitted(false);
@@ -164,7 +164,7 @@ export function EnquiryModal({
                 </div>
               </div>
 
-              {defaultAction === "visit" && (
+              {/* {defaultAction === "visit" && (
                 <div>
                   <label className="block text-xs uppercase tracking-wider text-muted-foreground">
                     Preferred Visit Date
@@ -179,26 +179,27 @@ export function EnquiryModal({
                     />
                   </div>
                 </div>
-              )}
+              )} */}
 
               <div className="pt-2">
                 <button
                   type="submit"
                   className="w-full rounded-md bg-gradient-brand py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-brand-foreground shadow-brand transition hover:opacity-95"
                 >
-                  {defaultAction === "floorplan"
+                  Confirm
+                  {/* {defaultAction === "floorplan"
                     ? "Get Detailed Floor Plan PDF"
                     : defaultAction === "visit"
                     ? "Confirm Site Visit Request"
                     : defaultAction === "pricing"
                     ? "Receive Price Breakdown"
-                    : "Download Official Brochure"}
+                    : "Download Official Brochure"} */}
                 </button>
               </div>
 
-              <p className="text-center text-[0.6875rem] text-muted-foreground">
+              {/* <p className="text-center text-[0.6875rem] text-muted-foreground">
                 🔒 We respect your privacy. No spam. Instant official PDF download link provided.
-              </p>
+              </p> */}
             </form>
           </div>
         )}
