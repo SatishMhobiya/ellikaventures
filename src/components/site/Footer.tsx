@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.2fr_1fr_1fr] lg:px-10">
         <div>
           <div className="flex items-baseline gap-2">
-            <span className="font-display text-2xl">Naverah</span>
+            <span className="font-display text-2xl">Ellikaventures</span>
             <span className="eyebrow">Assets</span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
@@ -51,9 +51,9 @@ export function Footer() {
               <br />
               <a
                 className="transition-colors hover:text-brand"
-                href="mailto:hello@naverahassets.com"
+                href="mailto:hello@ellikaventures.com"
               >
-                hello@naverahassets.com
+                hello@ellikaventures.com
               </a>
             </p>
           </address>
@@ -61,7 +61,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border/50 px-6 py-6 text-center text-xs tracking-wide text-muted-foreground lg:px-10">
-        © {new Date().getFullYear()} Naverah Assets. All rights reserved.
+        © {new Date().getFullYear()} Ellikaventures. All rights reserved.
       </div>
     </footer>
   );

@@ -62,7 +62,7 @@ export function Header() {
                 open ? "text-foreground" : isTransparent ? "text-white" : "text-foreground"
               }`}
             >
-              Naverah
+              Ellikaventures
             </span>
             <span className="eyebrow text-brand">Assets</span>
           </Link>
@@ -114,7 +114,7 @@ export function Header() {
             <div className="flex items-center justify-between pb-6 border-b border-border/60">
               <Link to="/" className="flex items-baseline gap-2" onClick={() => setOpen(false)}>
                 <span className="font-display text-2xl tracking-tight text-foreground">
-                  Naverah
+                  Ellikaventures
                 </span>
                 <span className="eyebrow text-brand">Assets</span>
               </Link>

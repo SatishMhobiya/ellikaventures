@@ -103,7 +103,7 @@ export const projects: Project[] = [
   {
     slug: "mizumi-reserve",
     name: "Mizumi Reserve",
-    developer: "Naverah Signature",
+    developer: "Ellikaventures Signature",
     location: "Kudlu, Off Hosur Road",
     city: "Bengaluru",
     propertyType: "Apartments",
@@ -554,9 +554,9 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: "naverah-one-tower",
-    name: "Naverah One",
-    developer: "Naverah Assets",
+    slug: "Ellikaventures-one-tower",
+    name: "Ellikaventures One",
+    developer: "Ellikaventures",
     location: "Yelahanka, Bellary Road",
     city: "Bengaluru",
     propertyType: "Apartments",
@@ -612,7 +612,7 @@ export const projects: Project[] = [
     summary:
       "Efficient 2 & 3 BHK homes on the airport corridor, with sky decks on alternate floors and podium landscape.",
     description: [
-      "Naverah One is planned for the buyer who wants airport-corridor appreciation without giving up daily liveability. Two towers, wide corridors, and only four homes per core.",
+      "Ellikaventures One is planned for the buyer who wants airport-corridor appreciation without giving up daily liveability. Two towers, wide corridors, and only four homes per core.",
       "Sky decks on alternate floors give residents shared open space at height, and the podium keeps all parking below the landscape level.",
       "With direct access to the 10-lane Bellary Road expressway and the upcoming Blue Line Metro station within 6 minutes, connectivity to Manyata and Kempegowda Airport is seamless.",
     ],
@@ -899,7 +899,7 @@ export const projects: Project[] = [
   {
     slug: "the-ivory-villas",
     name: "The Ivory Villas",
-    developer: "Naverah Signature",
+    developer: "Ellikaventures Signature",
     location: "Sarjapur Road",
     city: "Bengaluru",
     propertyType: "Villas",
@@ -1229,7 +1229,7 @@ export const projects: Project[] = [
   {
     slug: "serene-row-houses",
     name: "Serene Row Houses",
-    developer: "Naverah Communities",
+    developer: "Ellikaventures Communities",
     location: "Devanahalli",
     city: "Bengaluru",
     propertyType: "Row Houses",

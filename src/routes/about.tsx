@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import interior from "@/assets/interior-ivory.jpg";
 
-const title = "About Naverah Assets | RERA-Authorised Channel Partner";
+const title = "About Ellikaventures | RERA-Authorised Channel Partner";
 const description =
-  "Naverah Assets is a RERA-authorised Bengaluru real estate channel partner led by directors with 10+ years of experience, bridging developers and investors.";
+  "Ellikaventures is a RERA-authorised Bengaluru real estate channel partner led by directors with 10+ years of experience, bridging developers and investors.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -30,7 +30,7 @@ function About() {
       <div className="mt-14 grid gap-14 lg:grid-cols-2">
         <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
           <p>
-            Naverah Assets is a RERA-authorised channel partner working across Bengaluru's premium
+            Ellikaventures is a RERA-authorised channel partner working across Bengaluru's premium
             residential market. Our directors have spent more than a decade each on the developer
             and buyer side, and the firm exists to make that knowledge available to a handful of
             clients at a time.

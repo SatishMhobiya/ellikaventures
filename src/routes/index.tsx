@@ -20,7 +20,7 @@ import { projects, propertyTypes, statuses, type PropertyType } from "@/data/pro
 import { ProjectCard } from "@/components/site/ProjectCard";
 import { EnquiryModal } from "@/components/site/EnquiryModal";
 
-const title = "Naverah Assets | Luxury Real Estate & Residences in Bengaluru";
+const title = "Ellikaventures | Luxury Real Estate & Residences in Bengaluru";
 const description =
   "Authorised partner for premium Bengaluru residences. Discover curated 2, 3 and 4 BHK apartments, luxury villas, and row houses with verified RERA documentation, master plans, and site visits.";
 
@@ -110,19 +110,19 @@ function SearchBar() {
 function Index() {
   const [selectedFilter, setSelectedFilter] = useState<"All" | PropertyType>("All");
   const [modalOpen, setModalOpen] = useState(false);
-  const [activeProjectForModal, setActiveProjectForModal] = useState("Naverah Collection");
+  const [activeProjectForModal, setActiveProjectForModal] = useState("Ellikaventures Collection");
 
   const filteredProjects =
     selectedFilter === "All" ? projects : projects.filter((p) => p.propertyType === selectedFilter);
 
   const openEnquiry = (projectName?: string) => {
-    setActiveProjectForModal(projectName || "Naverah Collection");
+    setActiveProjectForModal(projectName || "Ellikaventures Collection");
     setModalOpen(true);
   };
 
   return (
     <div className="bg-background">
-      {/* 1. HERO SECTION (Clean balanced backdrop like naverahassets.com) */}
+      {/* 1. HERO SECTION (Clean balanced backdrop like ellikaventures.com) */}
       <section className="relative flex min-h-[92vh] items-center overflow-hidden">
         <img
           src={hero}
@@ -131,7 +131,7 @@ function Index() {
           height={1200}
           className="absolute size-full object-cover"
         />
-        {/* Clean, uniform dark backdrop overlay matching naverahassets.com */}
+        {/* Clean, uniform dark backdrop overlay matching ellikaventures.com */}
         <div className="absolute inset-0 bg-black/50 backdrop-brightness-95" />
 
         <div className="relative mx-auto w-full max-w-7xl px-6 pt-28 pb-16 sm:py-24 lg:px-10 lg:py-28">
@@ -143,7 +143,7 @@ function Index() {
           </div>
 
           <h1 className="mt-4 sm:mt-5 max-w-4xl font-display text-3xl font-normal leading-[1.12] text-white sm:text-6xl lg:text-7xl sm:leading-[1.08]">
-            Find your perfect property with <span className="text-brand">Naverah Assets</span>
+            Find your perfect property with <span className="text-brand">Ellikaventures</span>
           </h1>
 
           <SearchBar />
@@ -333,7 +333,7 @@ function Index() {
             {
               hub: "Airport Corridor",
               location: "Yelahanka & Bellary Road",
-              projects: "Naverah One Tower",
+              projects: "Ellikaventures One Tower",
               distance: "18 mins to BLR Airport · Blue Line Metro",
             },
             {
@@ -374,7 +374,7 @@ function Index() {
       <section className="border-t border-border/80 bg-surface py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="eyebrow">The Naverah Advantage</p>
+            <p className="eyebrow">The Ellikaventures Advantage</p>
             <h2 className="mt-3 font-display text-4xl leading-tight text-foreground sm:text-5xl">
               Transparent advisory from shortlist to key handover
             </h2>

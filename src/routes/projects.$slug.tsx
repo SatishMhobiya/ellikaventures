@@ -29,7 +29,7 @@ export const Route = createFileRoute("/projects/$slug")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Project not found | Naverah Assets" },
+          { title: "Project not found | Ellikaventures" },
           { name: "robots", content: "noindex" },
         ],
       };
@@ -121,7 +121,7 @@ function ProjectDetail() {
           height={1100}
           className="absolute size-full object-cover"
         />
-        {/* Clean, uniform dark backdrop overlay matching naverahassets.com */}
+        {/* Clean, uniform dark backdrop overlay matching ellikaventures.com */}
         <div className="absolute inset-0 bg-black/50 backdrop-brightness-95" />
 
         <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 pb-16 lg:px-10 lg:pb-20">
@@ -420,7 +420,7 @@ function ProjectDetail() {
             </div>
 
             <div className="mt-6 rounded-lg bg-background p-4 text-[0.6875rem] text-muted-foreground">
-              <p className="font-semibold text-foreground">Naverah Client Guarantee:</p>
+              <p className="font-semibold text-foreground">Ellikaventures Client Guarantee:</p>
               <p className="mt-1">
                 Zero brokerage on new developer bookings. Complete title diligence & loan
                 assistance.

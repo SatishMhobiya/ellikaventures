@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Check } from "lucide-react";
 import { projects } from "@/data/projects";
 
-const title = "Contact Naverah Assets | Book a Site Visit";
+const title = "Contact Ellikaventures | Book a Site Visit";
 const description =
-  "Request a brochure or book an accompanied site visit for Naverah Assets projects in Bengaluru. We reply within one working day.";
+  "Request a brochure or book an accompanied site visit for Ellikaventures projects in Bengaluru. We reply within one working day.";
 
 type Search = { project?: string };
 
@@ -64,10 +64,10 @@ function Contact() {
               <dt className="eyebrow">Email</dt>
               <dd className="mt-2">
                 <a
-                  href="mailto:hello@naverahassets.com"
+                  href="mailto:hello@ellikaventures.com"
                   className="text-muted-foreground hover:text-brand"
                 >
-                  hello@naverahassets.com
+                  hello@ellikaventures.com
                 </a>
               </dd>
             </div>

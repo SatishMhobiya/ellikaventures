@@ -3,9 +3,9 @@ import { useMemo, useState } from "react";
 import { projects, propertyTypes, statuses } from "@/data/projects";
 import { ProjectCard } from "@/components/site/ProjectCard";
 
-const title = "Projects | Naverah Assets Bengaluru";
+const title = "Projects | Ellikaventures Bengaluru";
 const description =
-  "Every Naverah Assets project in Bengaluru — apartments, villas and row houses with configurations, sizes, price from, possession dates and RERA numbers.";
+  "Every Ellikaventures project in Bengaluru — apartments, villas and row houses with configurations, sizes, price from, possession dates and RERA numbers.";
 
 export const Route = createFileRoute("/projects/")({
   head: () => ({
