@@ -49,7 +49,10 @@ export function Footer() {
                 +91 90000 00000
               </a>
               <br />
-              <a className="transition-colors hover:text-brand" href="mailto:hello@naverahassets.com">
+              <a
+                className="transition-colors hover:text-brand"
+                href="mailto:hello@naverahassets.com"
+              >
                 hello@naverahassets.com
               </a>
             </p>

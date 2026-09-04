@@ -113,9 +113,7 @@ function Index() {
   const [activeProjectForModal, setActiveProjectForModal] = useState("Naverah Collection");
 
   const filteredProjects =
-    selectedFilter === "All"
-      ? projects
-      : projects.filter((p) => p.propertyType === selectedFilter);
+    selectedFilter === "All" ? projects : projects.filter((p) => p.propertyType === selectedFilter);
 
   const openEnquiry = (projectName?: string) => {
     setActiveProjectForModal(projectName || "Naverah Collection");
@@ -229,9 +227,9 @@ function Index() {
                 Amenities crafted for living, not just brochures
               </h2>
               <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-                Drawing inspiration from Bengaluru's leading architectural developers, every residence
-                in our portfolio balances deep living balconies, thermal regulation, and expansive
-                green cover.
+                Drawing inspiration from Bengaluru's leading architectural developers, every
+                residence in our portfolio balances deep living balconies, thermal regulation, and
+                expansive green cover.
               </p>
 
               <div className="mt-8 space-y-4">
@@ -249,7 +247,10 @@ function Index() {
                     d: "All vehicular circulation and parking kept below ground, ensuring child-safe parks and silence on the surface.",
                   },
                 ].map((feat) => (
-                  <div key={feat.t} className="rounded-lg border border-border/60 bg-background p-4">
+                  <div
+                    key={feat.t}
+                    className="rounded-lg border border-border/60 bg-background p-4"
+                  >
                     <h4 className="font-display text-lg text-foreground">{feat.t}</h4>
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{feat.d}</p>
                   </div>

@@ -22,9 +22,7 @@ export function ProjectGallery({ items, projectName }: ProjectGalleryProps) {
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
   const filteredItems =
-    activeCategory === "All"
-      ? items
-      : items.filter((item) => item.category === activeCategory);
+    activeCategory === "All" ? items : items.filter((item) => item.category === activeCategory);
 
   useEffect(() => {
     if (lightboxIndex !== null) {
@@ -96,7 +94,9 @@ export function ProjectGallery({ items, projectName }: ProjectGalleryProps) {
             key={item.src + idx}
             onClick={() => setLightboxIndex(idx)}
             className={`group relative cursor-pointer overflow-hidden rounded-lg border border-border/70 bg-background ${
-              idx === 0 && filteredItems.length > 2 ? "sm:col-span-2 lg:col-span-2 sm:row-span-2" : ""
+              idx === 0 && filteredItems.length > 2
+                ? "sm:col-span-2 lg:col-span-2 sm:row-span-2"
+                : ""
             }`}
           >
             <div
@@ -115,7 +115,6 @@ export function ProjectGallery({ items, projectName }: ProjectGalleryProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-80" />
 
               <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-2">
-
                 <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-white/20 text-white backdrop-blur-sm transition-transform group-hover:scale-110">
                   <Maximize2 className="size-4" />
                 </div>

@@ -51,8 +51,8 @@ export function Header() {
           open
             ? "border-b border-border/80 bg-background"
             : isTransparent
-            ? "bg-gradient-to-b from-black/80 via-black/40 to-transparent"
-            : "border-b border-border/80 bg-background/95 shadow-sm backdrop-blur-xl"
+              ? "bg-gradient-to-b from-black/80 via-black/40 to-transparent"
+              : "border-b border-border/80 bg-background/95 shadow-sm backdrop-blur-xl"
         }`}
       >
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
@@ -85,7 +85,9 @@ export function Header() {
             <Link
               to="/contact"
               className={`rounded-md border border-brand/80 px-5 py-2 text-xs uppercase tracking-[0.2em] text-brand transition-all hover:bg-brand hover:text-brand-foreground ${
-                isTransparent ? "bg-brand/10 backdrop-blur-sm" : "hover:bg-brand hover:text-brand-foreground"
+                isTransparent
+                  ? "bg-brand/10 backdrop-blur-sm"
+                  : "hover:bg-brand hover:text-brand-foreground"
               }`}
             >
               Book a site visit
@@ -111,7 +113,9 @@ export function Header() {
           <div>
             <div className="flex items-center justify-between pb-6 border-b border-border/60">
               <Link to="/" className="flex items-baseline gap-2" onClick={() => setOpen(false)}>
-                <span className="font-display text-2xl tracking-tight text-foreground">Naverah</span>
+                <span className="font-display text-2xl tracking-tight text-foreground">
+                  Naverah
+                </span>
                 <span className="eyebrow text-brand">Assets</span>
               </Link>
               <button

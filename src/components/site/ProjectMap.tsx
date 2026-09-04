@@ -9,12 +9,7 @@ interface ProjectMapProps {
   categories: ConnectivityCategory[];
 }
 
-export function ProjectMap({
-  mapData,
-  projectName,
-  location,
-  categories,
-}: ProjectMapProps) {
+export function ProjectMap({ mapData, projectName, location, categories }: ProjectMapProps) {
   const [activeCategory, setActiveCategory] = useState(0);
   const [mapInteractive, setMapInteractive] = useState(false);
 
@@ -28,9 +23,7 @@ export function ProjectMap({
             <Compass className="size-4" />
             <span>Strategic Location & Connectivity</span>
           </div>
-          <h3 className="mt-2 font-display text-3xl text-foreground sm:text-4xl">
-            {location}
-          </h3>
+          <h3 className="mt-2 font-display text-3xl text-foreground sm:text-4xl">{location}</h3>
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
             {mapData.address}
           </p>
@@ -97,7 +90,9 @@ export function ProjectMap({
               {projectName}
             </span>
           </div>
-          <p className="text-[0.625rem] sm:text-[0.6875rem] text-muted-foreground">{location}, Bengaluru</p>
+          <p className="text-[0.625rem] sm:text-[0.6875rem] text-muted-foreground">
+            {location}, Bengaluru
+          </p>
         </div>
       </div>
     </div>

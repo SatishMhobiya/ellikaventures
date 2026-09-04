@@ -56,18 +56,11 @@ function ProjectsPage() {
           <span className="w-24 text-[0.625rem] uppercase tracking-[0.22em] text-muted-foreground">
             Type
           </span>
-          <button
-            className={chip(!type)}
-            onClick={() => setType(undefined)}
-          >
+          <button className={chip(!type)} onClick={() => setType(undefined)}>
             All
           </button>
           {propertyTypes.map((t) => (
-            <button
-              key={t}
-              className={chip(type === t)}
-              onClick={() => setType(t)}
-            >
+            <button key={t} className={chip(type === t)} onClick={() => setType(t)}>
               {t}
             </button>
           ))}
@@ -76,18 +69,11 @@ function ProjectsPage() {
           <span className="w-24 text-[0.625rem] uppercase tracking-[0.22em] text-muted-foreground">
             Status
           </span>
-          <button
-            className={chip(!status)}
-            onClick={() => setStatus(undefined)}
-          >
+          <button className={chip(!status)} onClick={() => setStatus(undefined)}>
             All
           </button>
           {statuses.map((s) => (
-            <button
-              key={s}
-              className={chip(status === s)}
-              onClick={() => setStatus(s)}
-            >
+            <button key={s} className={chip(status === s)} onClick={() => setStatus(s)}>
               {s}
             </button>
           ))}

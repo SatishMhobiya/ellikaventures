@@ -71,10 +71,15 @@ function ProjectDetail() {
   const others = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalAction, setModalAction] = useState<"brochure" | "floorplan" | "visit" | "pricing">("brochure");
+  const [modalAction, setModalAction] = useState<"brochure" | "floorplan" | "visit" | "pricing">(
+    "brochure",
+  );
   const [selectedUnitTitle, setSelectedUnitTitle] = useState<string | undefined>(undefined);
 
-  const openModal = (action: "brochure" | "floorplan" | "visit" | "pricing", unitTitle?: string) => {
+  const openModal = (
+    action: "brochure" | "floorplan" | "visit" | "pricing",
+    unitTitle?: string,
+  ) => {
     setModalAction(action);
     setSelectedUnitTitle(unitTitle);
     setModalOpen(true);
@@ -192,7 +197,9 @@ function ProjectDetail() {
 
           <div className="hidden items-center gap-3 sm:flex">
             <span className="text-xs text-muted-foreground">Pricing from:</span>
-            <span className="font-display text-lg font-semibold text-brand">{project.priceFrom}</span>
+            <span className="font-display text-lg font-semibold text-brand">
+              {project.priceFrom}
+            </span>
             <button
               onClick={() => openModal("pricing")}
               className="rounded bg-brand px-3.5 py-1.5 text-[0.6875rem] uppercase tracking-wider text-brand-foreground"
@@ -211,7 +218,9 @@ function ProjectDetail() {
               <p className="text-[0.625rem] uppercase tracking-[0.22em] text-muted-foreground truncate">
                 {f.label}
               </p>
-              <p className="mt-1.5 font-display text-base sm:text-2xl text-foreground break-words">{f.value}</p>
+              <p className="mt-1.5 font-display text-base sm:text-2xl text-foreground break-words">
+                {f.value}
+              </p>
             </div>
           ))}
         </div>
@@ -241,7 +250,10 @@ function ProjectDetail() {
               <h3 className="mt-2 font-display text-2xl text-foreground">Project Highlights</h3>
               <ul className="mt-6 grid gap-4 sm:grid-cols-2">
                 {project.highlights.map((h) => (
-                  <li key={h} className="flex items-start gap-3 text-sm leading-relaxed text-muted-foreground">
+                  <li
+                    key={h}
+                    className="flex items-start gap-3 text-sm leading-relaxed text-muted-foreground"
+                  >
                     <Check className="mt-1 size-4 shrink-0 text-brand" />
                     <span>{h}</span>
                   </li>
@@ -272,10 +284,7 @@ function ProjectDetail() {
 
           {/* 4. GALLERY WITH LIGHTBOX */}
           <section id="gallery" className="scroll-mt-36">
-            <ProjectGallery
-              items={project.galleryItems}
-              projectName={project.name}
-            />
+            <ProjectGallery items={project.galleryItems} projectName={project.name} />
           </section>
 
           {/* 5. LOCATION WITH INTERACTIVE MAP */}
@@ -298,7 +307,8 @@ function ProjectDetail() {
                     Configurations & Pricing
                   </h3>
                   <p className="mt-1 text-xs text-muted-foreground">
-                    Direct pricing without intermediary markups. Subject to unit floor rise & facing.
+                    Direct pricing without intermediary markups. Subject to unit floor rise &
+                    facing.
                   </p>
                 </div>
                 <button
@@ -370,7 +380,8 @@ function ProjectDetail() {
               Interested in {project.name}?
             </h3>
             <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">
-              Get direct developer inventory, negotiated launch benefits, and floor-plate availability.
+              Get direct developer inventory, negotiated launch benefits, and floor-plate
+              availability.
             </p>
 
             <dl className="mt-6 space-y-3 border-y border-border/60 py-4 text-xs">
@@ -411,7 +422,8 @@ function ProjectDetail() {
             <div className="mt-6 rounded-lg bg-background p-4 text-[0.6875rem] text-muted-foreground">
               <p className="font-semibold text-foreground">Naverah Client Guarantee:</p>
               <p className="mt-1">
-                Zero brokerage on new developer bookings. Complete title diligence & loan assistance.
+                Zero brokerage on new developer bookings. Complete title diligence & loan
+                assistance.
               </p>
             </div>
           </div>
@@ -477,7 +489,9 @@ function ProjectDetail() {
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border/80 bg-surface/95 px-4 pt-3 pb-[max(0.875rem,env(safe-area-inset-bottom))] shadow-2xl backdrop-blur-md lg:hidden">
         <div className="flex items-center justify-between gap-3">
           <div>
-            <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">Starting From</p>
+            <p className="text-[0.625rem] uppercase tracking-wider text-muted-foreground">
+              Starting From
+            </p>
             <p className="font-display text-lg font-bold text-brand">{project.priceFrom}</p>
           </div>
           <div className="flex items-center gap-2">

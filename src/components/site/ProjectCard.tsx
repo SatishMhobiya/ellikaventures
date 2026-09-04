@@ -106,7 +106,9 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
         <div className="mt-6 flex items-center justify-between border-t border-border/60 pt-4">
           <div className="flex items-center gap-1.5 text-[0.6875rem] text-muted-foreground">
             <ShieldCheck className="size-3.5 text-brand" />
-            <span className="truncate max-w-[170px] sm:max-w-none">RERA: {project.rera.slice(0, 18)}...</span>
+            <span className="truncate max-w-[170px] sm:max-w-none">
+              RERA: {project.rera.slice(0, 18)}...
+            </span>
           </div>
           <Link
             to="/projects/$slug"
