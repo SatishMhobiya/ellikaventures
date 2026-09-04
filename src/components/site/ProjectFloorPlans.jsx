@@ -1,0 +1,131 @@
+import { useState } from "react";
+import { Layers, Download, Maximize2, Compass, X } from "lucide-react";
+
+export function ProjectFloorPlans({
+  masterPlan,
+  projectName,
+  onDownloadFloorPlan,
+}) {
+  const [viewHighResImage, setViewHighResImage] = useState(null);
+
+  return (
+    <div className="rounded-xl border border-border/80 bg-surface p-5 sm:p-8 lg:p-10 shadow-lift">
+      {/* Header & View Mode Switcher */}
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-brand">
+            <Layers className="size-4" />
+            <span>Architectural Layouts</span>
+          </div>
+          <h3 className="mt-2 font-display text-2xl sm:text-3xl lg:text-4xl text-foreground">
+            Master Plan & Unit Layouts
+          </h3>
+        </div>
+      </div>
+
+      <div className="mt-6 sm:mt-8 space-y-6 animate-fade-in">
+        <div className="relative overflow-hidden rounded-xl border border-border/70 bg-black/5">
+          <img
+            src={masterPlan.image}
+            alt={`${projectName} Master Plan Layout`}
+            width={1400}
+            height={900}
+            className="w-full object-cover shadow-inner"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+          <button
+            type="button"
+            onClick={() => setViewHighResImage(masterPlan.image)}
+            className="absolute right-3.5 top-3.5 flex items-center gap-1.5 rounded-md bg-surface/90 px-3 py-1.5 text-xs text-foreground shadow-sm backdrop-blur-sm transition-all hover:bg-surface"
+          >
+            <Maximize2 className="size-3.5 text-brand" />
+            <span>Enlarge Plan</span>
+          </button>
+
+          <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-wrap items-center justify-between gap-2 text-white">
+            <div className="flex items-center gap-2">
+              <Compass className="size-4 text-brand" />
+              <span className="text-xs uppercase tracking-widest text-brand font-semibold">
+                Master Site Blueprint
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => onDownloadFloorPlan("Master Layout Plan")}
+              className="flex items-center gap-1.5 rounded bg-brand px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-foreground shadow-sm hover:opacity-95"
+            >
+              <span>Request</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 sm:mt-8 space-y-6 animate-fade-in">
+        <div className="relative overflow-hidden rounded-xl border border-border/70 bg-black/5">
+          <img
+            src={masterPlan.image}
+            alt={`${projectName} Unit Layout`}
+            width={1400}
+            height={900}
+            className="w-full object-cover shadow-inner"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+          <button
+            type="button"
+            onClick={() => setViewHighResImage(masterPlan.image)}
+            className="absolute right-3.5 top-3.5 flex items-center gap-1.5 rounded-md bg-surface/90 px-3 py-1.5 text-xs text-foreground shadow-sm backdrop-blur-sm transition-all hover:bg-surface"
+          >
+            <Maximize2 className="size-3.5 text-brand" />
+            <span>Enlarge Plan</span>
+          </button>
+
+          <div className="absolute bottom-3.5 left-3.5 right-3.5 flex flex-wrap items-center justify-between gap-2 text-white">
+            <div className="flex items-center gap-2">
+              <Compass className="size-4 text-brand" />
+              <span className="text-xs uppercase tracking-widest text-brand font-semibold">
+                Unit Floor Plan
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => onDownloadFloorPlan("Unit Floor Plan")}
+              className="flex items-center gap-1.5 rounded bg-brand px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-foreground shadow-sm hover:opacity-95"
+            >
+              <Download className="size-3.5" />
+              <span>Request</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Enlarge Modal */}
+      {viewHighResImage && (
+        <div
+          onClick={() => setViewHighResImage(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-md animate-fade-in"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-h-[90vh] max-w-5xl overflow-hidden rounded-lg bg-background p-2"
+          >
+            <button
+              type="button"
+              onClick={() => setViewHighResImage(null)}
+              className="absolute right-3 top-3 z-10 flex size-9 items-center justify-center rounded-full bg-black/60 text-white transition-colors hover:bg-black"
+              aria-label="Close modal"
+            >
+              <X className="size-5" />
+            </button>
+            <img
+              src={viewHighResImage}
+              alt="Floor Plan Enlarge"
+              className="max-h-[82vh] w-auto object-contain rounded"
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
